@@ -1,0 +1,90 @@
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="number"], input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#results {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#consumption-chart {
+    max-width: 600px;
+    margin: 20px auto;
+}
+/* Styles pour les écrans plus petits (téléphones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Réduction de la taille du texte */
+    }
+
+    nav ul {
+        flex-direction: column; /* Empile les liens verticalement */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Ajoute de l'espacement vertical */
+    }
+
+    main {
+        padding: 10px; /* Réduction des marges */
+    }
+
+    section {
+        margin-bottom: 15px; /* Réduction de l'espacement entre les sections */
+    }
+
+    canvas {
+        width: 100%; /* S'adapte à la largeur de l'écran */
+        height: auto; /* Ajuste automatiquement la hauteur */
+    }
+}

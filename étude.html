@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculateur solaire</title>
+  <link rel="stylesheet" href="etude.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+  <h1>Calculateur solaire </h1>
+  <form id="solar-form">
+    <label for="monthly-consumption">Consommation mensuelle (kWh):</label>
+    <input type="number" id="monthly-consumption" placeholder="Entrez la consommation" required>
+
+    <label for="country">Pays:</label>
+    <select id="country">
+      <option value="">Sélectionnez un pays</option>
+    </select>
+
+    <label for="region">Région:</label>
+    <select id="region">
+      <option value="">Sélectionnez une région</option>
+    </select>
+
+    <label for="electricity-rate">Prix de l'électricité (par kWh):</label>
+    <input type="number" id="electricity-rate" placeholder="Entrez le tarif" required>
+
+    <button type="button" id="calculate">Calculer</button>
+    <button type="reset" id="reset">Rétablir</button>
+  </form>
+
+  <div id="results" style="display: none;">
+    <h2>Résultats</h2>
+    <p><strong>Puissance crête (kWc):</strong> <span id="peak-power"></span></p>
+    <p><strong>Production annuelle estimée (kWh):</strong> <span id="annual-production"></span></p>
+    <p><strong>Retour sur investissement (années):</strong> <span id="roi"></span></p>
+    <p><strong>Prix de l'électricité:</strong> <span id="electricity-price"></span></p>
+
+    <canvas id="production-chart"></canvas>
+  </div>
+</div>
+<script src="etude.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #1f5d3a;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.tip:hover {
+    transform: translateY(-10px);
+}
+.tips {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    transition: gap 0.3s ease-in-out;
+}
+
+
+.tip {
+    flex: 1 1 calc(33.333% - 10px);
+    background: #eef9f2;
+    padding: 15px;
+    border: 1px solid #d9e8de;
+    border-radius: 5px;
+
+}
+
+footer {
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+/* Styles pour les écrans plus petits (téléphones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Réduction de la taille du texte */
+    }
+
+    nav ul {
+        flex-direction: column; /* Empile les liens verticalement */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Ajoute de l'espacement vertical */
+    }
+
+    main {
+        padding: 10px; /* Réduction des marges */
+    }
+
+    section {
+        margin-bottom: 15px; /* Réduction de l'espacement entre les sections */
+    }
+
+    canvas {
+        width: 100%; /* S'adapte à la largeur de l'écran */
+        height: auto; /* Ajuste automatiquement la hauteur */
+    }
+}

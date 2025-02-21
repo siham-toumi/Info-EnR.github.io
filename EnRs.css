@@ -1,0 +1,104 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #2b6777;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background: #52ab98;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background: #28a745;
+    border-radius: 5px;
+
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #52ab98;
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+}
+/* Styles pour les écrans plus petits (téléphones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Réduction de la taille du texte */
+    }
+
+    nav ul {
+        flex-direction: column; /* Empile les liens verticalement */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Ajoute de l'espacement vertical */
+    }
+
+    main {
+        padding: 10px; /* Réduction des marges */
+    }
+
+    section {
+        margin-bottom: 15px; /* Réduction de l'espacement entre les sections */
+    }
+
+    canvas {
+        width: 100%; /* S'adapte à la largeur de l'écran */
+        height: auto; /* Ajuste automatiquement la hauteur */
+    }
+}

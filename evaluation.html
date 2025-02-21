@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Évaluation de la Consommation Énergétique</title>
+  <link rel="stylesheet" href="evaluation.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Évaluez votre consommation énergétique</h1>
+
+  <form id="energy-form">
+    <!-- Informations sur le logement -->
+    <div>
+      <label for="area">Superficie du logement (en m²) :</label>
+      <input type="number" id="area" name="area" required min="10" step="0.1">
+    </div>
+
+    <div>
+      <label for="rooms">Nombre de pièces :</label>
+      <input type="number" id="rooms" name="rooms" required min="1" step="1">
+    </div>
+
+    <div>
+      <label>Isolation :</label>
+      <input type="radio" id="isolation-yes" name="isolation" value="yes" checked>
+      <label for="isolation-yes">Oui</label>
+      <input type="radio" id="isolation-no" name="isolation" value="no">
+      <label for="isolation-no">Non</label>
+    </div>
+
+    <!-- Choix du tarif de l'électricité -->
+    <div>
+      <label for="tariff">Choisissez votre tarif d'électricité :</label>
+      <select id="tariff" name="tariff">
+        <option value="0.15">Tarif standard : 0,15 €/kWh</option>
+        <option value="0.10">Tarif heures creuses : 0,10 €/kWh</option>
+        <option value="0.20">Tarif heures pleines : 0,20 €/kWh</option>
+      </select>
+    </div>
+
+    <!-- Appareils électriques -->
+    <div id="appliances-section">
+      <h3>Appareils électriques</h3>
+      <div class="appliance">
+        <label>Nom de l'appareil :</label>
+        <input type="text" class="appliance-name" required>
+        <label>Puissance (W) :</label>
+        <input type="number" class="appliance-power" required>
+        <label>Utilisation quotidienne (h) :</label>
+        <input type="number" class="appliance-usage" required>
+      </div>
+    </div>
+    <button type="button" id="add-appliance">Ajouter un appareil</button>
+
+    <button type="submit">Calculer</button>
+    <button type="button" id="reset-form">Rétablir</button>
+  </form>
+
+  <!-- Résultats -->
+  <div id="results" style="display: none;">
+    <h2>Résultats de la consommation énergétique</h2>
+    <p><strong>Consommation totale estimée :</strong> <span id="total-consumption"></span> kWh</p>
+    <p><strong>Coût estimé :</strong> <span id="total-cost"></span> €</p>
+    <canvas id="consumption-chart" width="400" height="200"></canvas>
+    <p id="recommendations"></p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="evaluation.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007BFF;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#results {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+#results h2 {
+    text-align: center;
+    color: #28a745;
+}
+
+canvas {
+    margin-top: 20px;
+}
+/* Styles pour les écrans plus petits (téléphones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Réduction de la taille du texte */
+    }
+
+    nav ul {
+        flex-direction: column; /* Empile les liens verticalement */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Ajoute de l'espacement vertical */
+    }
+
+    main {
+        padding: 10px; /* Réduction des marges */
+    }
+
+    section {
+        margin-bottom: 15px; /* Réduction de l'espacement entre les sections */
+    }
+
+    canvas {
+        width: 100%; /* S'adapte à la largeur de l'écran */
+        height: auto; /* Ajuste automatiquement la hauteur */
+    }
+}
+.hidden {
+    display: none !important;
+}
+
